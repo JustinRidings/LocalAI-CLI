@@ -40,7 +40,7 @@ cd .\LocalAI-CLI
 
 ### 2. Set the Model Directory Environment Variable
 
-To save time between sessions, you can set a local environment variable for your Text Generation Model Directory. If this is unset, the application will ask you for it later.
+To save time between sessions, you can set a local environment variable for your Text Generation Model Directory. If this is unset, the application will ask you for it later. You'll want to confiigure this to point to the directory where the model itself lives. For example, using [Phi-3-mini-128k-intruct-onnx](https://huggingface.co/microsoft/Phi-3-mini-128k-instruct-onnx), you would set the directory to `C:\....\Phi-3-mini-128k-instruct-onnx\....\cpu-int4-rtn-block-32`
 
 ```sh
 set LOCAL_ONNX_TEXTGEN_DIR=C:\path\to\your\directory

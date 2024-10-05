@@ -26,9 +26,10 @@ jobs:
 
       - name: Publish projects
         run: |
-          for project in $(find . -name *.csproj); do
-            dotnet publish $project --configuration Release -o ./publish/$(basename $project .csproj)
-          done
+          $projects = Get-ChildItem -Filter *.csproj -Recurse
+          foreach ($project in $projects) {
+            dotnet publish $project.FullName --configuration Release -o ./publish/$($project.BaseName)
+          }
 
       - name: Create Release
         uses: actions/create-release@v1

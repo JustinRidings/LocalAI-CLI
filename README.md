@@ -93,7 +93,7 @@ Greedy search is an approach where you make the best choice at each step, aiming
 ```C#
     var defaultConfig = new OnnxConfig
     {
-        TextModelDir = textGenDir,
+        TextModelDir = "your/model/dir",
         NumBeams = 1, // Default Value, doesn't need to be declared.
     };
 ```

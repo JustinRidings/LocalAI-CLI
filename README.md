@@ -76,7 +76,7 @@ Exiting the application.
 ```
 ### 5. Advanced Configurations
 
-`OnnxTextGenerator` supports advanced configurations using different algorithms for token generation. By default, Greedy search is used.
+`OnnxTextGenerator` supports advanced configurations using different algorithms for token generation. By default, Greedy search is used. For more information about Advanced Configurations, please visit the [OnnxRuntimeGenAi](https://onnxruntime.ai/docs/genai/reference/config.html) documentation.
 
 #### 1. Greedy Search (Default)
 Greedy search is an approach where you make the best choice at each step, aiming for a quick and often good solution. Think of it like grabbing the biggest slice of pizza first, hoping it's the best move. It's fast and straightforward but doesn't always guarantee the best overall result.

@@ -34,7 +34,7 @@ You will also need an [ONNX Text Generation Model](https://huggingface.co/models
 Clone the repository to your local machine:
 
 ```sh
-git clone [<repository-url>](https://github.com/JustinRidings/LocalAI-CLI.git)
+git clone https://github.com/JustinRidings/LocalAI-CLI.git
 cd .\LocalAI-CLI
 ```
 

@@ -34,8 +34,8 @@ You will also need an [ONNX Text Generation Model](https://huggingface.co/models
 Clone the repository to your local machine:
 
 ```sh
-git clone <repository-url>
-cd <repository-directory>
+git clone [<repository-url>](https://github.com/JustinRidings/LocalAI-CLI.git)
+cd .\LocalAI-CLI
 ```
 
 ### 2. Set the Model Directory Environment Variable

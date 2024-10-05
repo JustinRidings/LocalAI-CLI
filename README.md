@@ -74,3 +74,43 @@ AI: Hi there! How can I assist you today?
 You: X
 Exiting the application.
 ```
+### 5. Advanced Configurations
+
+`OnnxTextGenerator` supports advanced configurations using different algorithms for token generation. By default, Greedy search is used.
+
+#### 1. Greedy Search (Default)
+Greedy search is an approach where you make the best choice at each step, aiming for a quick and often good solution. Think of it like grabbing the biggest slice of pizza first, hoping it's the best move. It's fast and straightforward but doesn't always guarantee the best overall result.
+
+```C#
+    var defaultConfig = new OnnxConfig
+    {
+        TextModelDir = textGenDir,
+        NumBeams = 1, // Default Value, doesn't need to be declared.
+    };
+```
+
+#### 2. Beam Search
+Beam search is an approach where you explore several possibilities at once but only keep the top few at each step. Imagine you're trying to find the best path through a maze by exploring multiple routes but only continuing with the most promising ones. It’s efficient and often finds better solutions than just picking the best option each time.
+
+```C#
+    var beamSearchOnnxConfig = new OnnxConfig
+    {
+        TextModelDir = "your/model/dir",
+        SearchType = OnnxConfig.OnnxSearchType.BeamSearch,
+        NumBeams = 2 // NumBeams must be > 1
+    };
+```
+
+#### 3. TopN (Top P / Top K)
+TopK is an approach that picks the top 'K' choices out of all possible options at each step. Imagine you're picking the best candies out of a bag, but you always pick the top 5 favorites each time. It helps in narrowing down choices while keeping the best options on the table. Top P (Nucleus) Search is an approach that considers options until a certain cumulative probability 'P' is reached. Think of it as choosing candies until the total sweetness hits a sweet spot. It’s more flexible and considers a wider variety of choices, ensuring some good surprises.
+
+```C#
+    var topNConfig = new OnnxConfig
+    {
+        TextModelDir = "your/model/dir",
+        SearchType = OnnxConfig.OnnxSearchType.TopN,
+        NumBeams = null, // Must be null to use TopN
+        TopK = 1, // Used for Top K
+        NucleusSampling = 0.75 // Used for Top P
+    };
+```

@@ -14,9 +14,7 @@ LocalAI-CLI is a command-line application that uses ONNX-based AI models for loc
 - .NET 8.0 or later
 - ONNX model for text generation
 
-## Getting Started
-
-### Prereqs
+## Prereqs
 
 You will need .NET 8 Runtime/SDK in order to code / build / use as a dotnet tool.
 
@@ -28,6 +26,8 @@ OR use CommandLine
 - `winget install dotnet-sdk-8`
 
 You will also need an [ONNX Text Generation Model](https://huggingface.co/models?pipeline_tag=text-generation&library=onnx&sort=trending) installed on your local machine. This demo was created using [Phi-3-mini-128k-intruct-onnx](https://huggingface.co/microsoft/Phi-3-mini-128k-instruct-onnx).
+
+## Getting Started 
 
 ### 1. Clone the Repository
 
@@ -74,7 +74,7 @@ AI: Hi there! How can I assist you today?
 You: X
 Exiting the application.
 ```
-### 5. Advanced Configurations
+## Advanced Configurations
 
 `OnnxTextGenerator` supports advanced configurations using different algorithms for token generation. By default, Greedy search is used. For more information about Advanced Configurations, please visit the [OnnxRuntimeGenAi](https://onnxruntime.ai/docs/genai/reference/config.html) documentation.
 
@@ -89,7 +89,7 @@ Greedy search is an approach where you make the best choice at each step, aiming
     };
 ```
 
-#### 2. Beam Search
+### 2. Beam Search
 Beam search is an approach where you explore several possibilities at once but only keep the top few at each step. Imagine you're trying to find the best path through a maze by exploring multiple routes but only continuing with the most promising ones. It’s efficient and often finds better solutions than just picking the best option each time.
 
 ```C#
@@ -101,7 +101,7 @@ Beam search is an approach where you explore several possibilities at once but o
     };
 ```
 
-#### 3. TopN (Top P / Top K)
+### 3. TopN (Top P / Top K)
 TopK is an approach that picks the top 'K' choices out of all possible options at each step. Imagine you're picking the best candies out of a bag, but you always pick the top 5 favorites each time. It helps in narrowing down choices while keeping the best options on the table. Top P (Nucleus) Search is an approach that considers options until a certain cumulative probability 'P' is reached. Think of it as choosing candies until the total sweetness hits a sweet spot. It’s more flexible and considers a wider variety of choices, ensuring some good surprises.
 
 ```C#

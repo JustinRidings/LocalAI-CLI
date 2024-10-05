@@ -16,4 +16,8 @@
     <PackageReference Include="Microsoft.KernelMemory.Core" Version="0.77.241004.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include=".github\workflows\release.yml" />
+  </ItemGroup>
+
 </Project>

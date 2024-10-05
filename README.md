@@ -6,6 +6,7 @@
 ![GitHub](https://img.shields.io/github/license/JustinRidings/LocalAI-CLI)
 ![GitHub contributors](https://img.shields.io/github/contributors/JustinRidings/LocalAI-CLI)
 ![GitHub All Releases](https://img.shields.io/github/downloads/JustinRidings/LocalAI-CLI/total)
+![GitHub stars](https://img.shields.io/github/stars/JustinRidings/LocalAI-CLI)
 ![GitHub forks](https://img.shields.io/github/forks/JustinRidings/LocalAI-CLI)
 
 LocalAI-CLI is a command-line application that uses ONNX-based AI models for local text generation. This application initializes a local model and interacts with the user by generating text based on their input.
